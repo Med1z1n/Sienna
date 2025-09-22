@@ -1,9 +1,27 @@
-const messages = ["Hello", "World", "nRF5340", "Nordic Rocks"]; // optional mapping if using numeric codes
 const serviceUUID = '4a980001-1cc4-e7c1-c757-f1267dd021e8';
 const charUUID = '4a980002-1cc4-e7c1-c757-f1267dd021e8';
 
 let device;
 let characteristic;
+
+// Resize text to fit container
+function fitTextToBox(element) {
+    const parent = element.parentElement;
+    let fontSize = 40; // starting font size
+    element.style.fontSize = fontSize + "px";
+
+    while ((element.scrollWidth > parent.clientWidth || element.scrollHeight > parent.clientHeight) && fontSize > 10) {
+        fontSize -= 1;
+        element.style.fontSize = fontSize + "px";
+    }
+}
+
+// Update message and resize text
+function updateMessage(text) {
+    const msgLabel = document.getElementById("messageLabel");
+    msgLabel.textContent = text;
+    fitTextToBox(msgLabel);
+}
 
 document.getElementById('connectButton').addEventListener('click', async () => {
     try {
@@ -19,7 +37,7 @@ document.getElementById('connectButton').addEventListener('click', async () => {
         await characteristic.startNotifications();
         characteristic.addEventListener('characteristicvaluechanged', handleNotification);
 
-        document.getElementById('messageLabel').innerText = "Connected!";
+        updateMessage("Connected!");
     } catch (error) {
         console.error(error);
         alert("Failed to connect: " + error);
@@ -36,5 +54,5 @@ function handleNotification(event) {
     // const code = value.getUint8(0);
     // const message = messages[code];
 
-    document.getElementById('messageLabel').innerText = message;
+    updateMessage(message);
 }
