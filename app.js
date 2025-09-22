@@ -9,6 +9,10 @@ const backgrounds = [
     'background5.jpg',
     'background6.png',
     'background7.jpg',
+    'background8.jpg',
+    'background9.jpg',
+    'background10.heic',
+    'background11.jpg',
 ];
 
 let bgIndex = 0; // current background index
