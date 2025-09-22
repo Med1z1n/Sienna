@@ -10,7 +10,7 @@
 body {
     position: relative;
     background-image: url('background.jpg'); /* your image file */
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff; /* text color for readability */
