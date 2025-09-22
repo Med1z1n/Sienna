@@ -32,7 +32,12 @@ function updateMessage(text) {
     const msgLabel = document.getElementById("messageLabel");
     msgLabel.textContent = text;
     fitTextToBox(msgLabel);
+
+    // Cycle background
+    document.body.style.backgroundImage = `url('${backgrounds[bgIndex]}')`;
+    bgIndex = (bgIndex + 1) % backgrounds.length; // loop through array
 }
+
 
 document.getElementById('connectButton').addEventListener('click', async () => {
     try {
