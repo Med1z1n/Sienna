@@ -56,6 +56,23 @@ h1 {
     background-color: #2980b9;
 }
 
+#changeBackgroundButton {
+    background-color: #2ecc71; /* green for distinction */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 40px;
+}
+
+#changeBackgroundButton:hover {
+    background-color: #27ae60;
+}
+
+
 /* Message Box Wrapper to vertically center */
 .message-container {
     flex: 1; /* takes remaining space */
