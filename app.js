@@ -2,7 +2,7 @@ const serviceUUID = '4a980001-1cc4-e7c1-c757-f1267dd021e8';
 const charUUID = '4a980002-1cc4-e7c1-c757-f1267dd021e8';
 
 const backgrounds = [
-    'background.jpg',
+    
     'background2.jpg',
     'background3.jpg',
     'background4.jpg',
@@ -13,6 +13,7 @@ const backgrounds = [
     'background9.jpg',
     'background10.jpg',
     'background11.jpg',
+    'background.jpg',
 ];
 
 let bgIndex = 0; // current background index
