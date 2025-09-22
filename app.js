@@ -70,13 +70,25 @@ document.getElementById('connectButton').addEventListener('click', async () => {
 
 function handleNotification(event) {
     const value = event.target.value;
-    
-    // If your firmware sends strings
-    const message = new TextDecoder().decode(value);
+    const rawMessage = new TextDecoder().decode(value);
 
-    // If your firmware sends numeric codes, you can map them:
-    // const code = value.getUint8(0);
-    // const message = messages[code];
-
-    updateMessage(message);
+    // If the message starts with 1: or 2:, split into code + message
+    if (rawMessage.startsWith("1:") || rawMessage.startsWith("2:")) {
+        const [code, ...rest] = rawMessage.split(":");
+        const message = rest.join(":"); // handles extra ":" in text
+        updateMessage(message); // show only the message
+    } 
+    // If it's just "3" or "4", handle as controller input
+    else if (rawMessage === "3") {
+        console.log("Button 3 pressed → game control");
+        // add your game logic here
+    } 
+    else if (rawMessage === "4") {
+        console.log("Button 4 pressed → game control");
+        // add your game logic here
+    } 
+    // fallback for any unexpected payloads
+    else {
+        updateMessage(rawMessage);
+    }
 }
