@@ -8,7 +8,7 @@ let characteristic;
 document.getElementById('connectButton').addEventListener('click', async () => {
     try {
         device = await navigator.bluetooth.requestDevice({
-            filters: [{ name: 'nRF5340 DK' }],
+            filters: [{ name: 'Cycler' }],
             optionalServices: [serviceUUID]
         });
 
