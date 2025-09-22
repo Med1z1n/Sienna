@@ -13,6 +13,8 @@ body {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: scroll;  /* FIX for iOS Safari */
+    -webkit-background-size: contain; /* Safari prefix just in case */
     color: #fff; /* text color for readability */
     display: flex;
     flex-direction: column;
