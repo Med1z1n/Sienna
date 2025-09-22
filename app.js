@@ -28,15 +28,18 @@ function fitTextToBox(element) {
     }
 }
 
+// change background
+document.getElementById('changeBackgroundButton').addEventListener('click', () => {
+    // cycle to the next background
+    document.body.style.backgroundImage = `url('${backgrounds[bgIndex]}')`;
+    bgIndex = (bgIndex + 1) % backgrounds.length;
+});
+
 // Update message and resize text
 function updateMessage(text) {
     const msgLabel = document.getElementById("messageLabel");
     msgLabel.textContent = text;
     fitTextToBox(msgLabel);
-
-    // Cycle background
-    document.body.style.backgroundImage = `url('${backgrounds[bgIndex]}')`;
-    bgIndex = (bgIndex + 1) % backgrounds.length; // loop through array
 }
 
 
