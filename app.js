@@ -20,6 +20,11 @@ let bgIndex = 0; // current background index
 let device;
 let characteristic;
 
+backgrounds.forEach(src => {
+  const img = new Image();
+  img.src = src;
+});
+
 // Resize text to fit container
 function fitTextToBox(element) {
     const parent = element.parentElement;
