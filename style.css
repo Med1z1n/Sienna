@@ -39,6 +39,14 @@ h1 {
     margin-bottom: 20px;
 }
 
+#subtitle {
+    font-size: 18px;
+    color: #ddd;
+    margin-top: -10px;   /* pulls it closer to the header */
+    margin-bottom: 20px; /* space before buttons */
+    font-style: italic;
+}
+
 /* Connect Button */
 #connectButton {
     background-color: #3498db;
