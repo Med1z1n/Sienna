@@ -10,11 +10,11 @@
 body {
     position: relative;
     background-image: url('background.jpg'); /* your image file */
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;  /* FIX for iOS Safari */
-    -webkit-background-size: contain; /* Safari prefix just in case */
+    -webkit-background-size: cover; /* Safari prefix just in case */
     color: #fff; /* text color for readability */
     display: flex;
     flex-direction: column;
