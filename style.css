@@ -54,7 +54,7 @@ h1 {
 /* Message Label - big text, centered, responsive */
 #messageLabel {
     font-size: 40px; /* initial font size */
-    background-color: #ecf0f1;
+    background-color: #f0f2f5;
     padding: 40px 60px;
     border-radius: 12px;
     text-align: center;
