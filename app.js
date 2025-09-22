@@ -11,7 +11,7 @@ const backgrounds = [
     'background7.jpg',
     'background8.jpg',
     'background9.jpg',
-    'background10.heic',
+    'background10.jpg',
     'background11.jpg',
 ];
 
