@@ -35,7 +35,10 @@ function fitTextToBox(element) {
 // change background
 document.getElementById('changeBackgroundButton').addEventListener('click', () => {
     // cycle to the next background
-    document.body.style.backgroundImage = `url('${backgrounds[bgIndex]}')`;
+    //document.body.style.backgroundImage = `url('${backgrounds[bgIndex]}')`;
+    document.body.style.backgroundImage =
+  `url('${backgrounds[bgIndex]}?v=${Date.now()}')`;
+
     bgIndex = (bgIndex + 1) % backgrounds.length;
 });
 
