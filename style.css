@@ -1,50 +1,69 @@
-/* Reset some defaults */
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Patrick Hand SC', cursive;
+}
 
-/* Body styling */
+/* Body styling - full screen flex column */
 body {
-    
     background-color: #f0f2f5;
     color: #333;
-    text-align: center;
-    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 /* Header */
 h1 {
     font-size: 2.2em;
     color: #2c3e50;
-    margin-bottom: 30px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Buttons */
-button {
+/* Connect Button */
+#connectButton {
     background-color: #3498db;
     color: #fff;
     border: none;
     padding: 12px 24px;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    margin: 10px;
+    margin-bottom: 40px;
 }
 
-button:hover {
+#connectButton:hover {
     background-color: #2980b9;
 }
 
-/* Message label */
+/* Message Box Wrapper to vertically center */
+.message-container {
+    flex: 1; /* Takes remaining space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Message Label - big text, centered, responsive */
 #messageLabel {
-    font-size: 24px;
-    margin-top: 20px;
+    font-size: 40px; /* initial font size */
     background-color: #ecf0f1;
-    padding: 20px;
-    border-radius: 8px;
-    display: inline-block;
+    padding: 40px 60px;
+    border-radius: 12px;
+    text-align: center;
     min-width: 300px;
+    min-height: 150px;
+    max-width: 80vw; 
+    max-height: 60vh;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
