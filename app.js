@@ -3,16 +3,16 @@ const charUUID = '4a980002-1cc4-e7c1-c757-f1267dd021e8';
 
 const backgrounds = [
     
-   // 'background2.jpg',
-   // 'background3.jpg',
-   // 'background4.jpg',
-   // 'background5.jpg',
-   //  'background6.png',
+    'background2.jpg',
+    'background3.jpg',
+    'background4.jpg',
+    'background5.jpg',
+    'background6.png',
     'background7.jpg',
-   // 'background8.jpg',
-   // 'background9.jpg',
+    'background8.jpg',
+    'background9.jpg',
     'background10.jpg',
-   // 'background11.jpg',
+    'background11.jpg',
     'background.jpg',
 ];
 
